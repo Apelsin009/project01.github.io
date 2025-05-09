@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Загальні стилі */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    flex-direction: column; /* Розташування елементів вертикально */
+    padding: 0 20px;
+}
+
+.container {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px; /* Додано відступ під контейнером для кнопки */
+}
+
+/* Заголовок */
+.login-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: gold; /* Золотий колір для заголовка */
+}
+
+/* Стилі для полів вводу */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gold; /* Золотий бордер */
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center; /* Для симетрії введених даних */
+    background-color: black; /* Чорний фон */
+    color: gold; /* Білий текст */
+}
+
+.input-box i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gold; /* Золотий колір іконки */
+}
+
+/* Чекбокс і посилання "забули пароль" */
+.remember-forgot-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Чекбокс "пам'ятати мене" */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Стилі для посилання "забули пароль" */
+.forgot-password {
+    color: gold;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка входу */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px; /* Для симетрії */
+}
+
+.login-button:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Посилання на реєстрацію */
+.dont-have-an-account {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.dont-have-an-account a {
+    color: gold;
+    text-decoration: none;
+}
+
+.dont-have-an-account a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка "Назад" */
+.back-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: gold;
+    color: black;
+}
+
+footer {
+    background-color: #333;
+    color: gold;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

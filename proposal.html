@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web kde můžeš půjčít auto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+body {
+    background-color: #000;
+    color: white; 
+}
+
+h1 {
+    text-align: center;
+    color: solid gold;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+}
+
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-button {
+    background: black; 
+    border: 4px solid gold;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+    background-color: gold; 
+    color: rgb(9, 40, 40); 
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgb(0, 0, 0); 
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(255, 196, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: white; 
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: gold;
+}
+
+.show {
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Auto-Ok</div>
+        <img class="img" src='https://i.postimg.cc/66HXB2DZ/file-UWGz-Rx-LAt52d-Cjxf-FJL3re.webp' width="70" height="50" alt='IMG-20250219-172007'/></a>
+        <div class="profile-menu">
+            <button class="profile-button" onclick="toggleMenu()">Můj profil</button>
+            <div class="dropdown-menu" id="profileMenu">
+                <a href="login.html">Přihlášení</a>
+                <a href="registration.html">Registrace</a>
+            </div>
+        </div>
+    </div>
+        <header>
+            <div class="container">
+                <h1>Objednavací stranka</h1>
+            </div>
+        </header>
+
+        <section id="auto" class="hero">
+            <div class="container">
+                <h2 style="color: gold;">Šetřete penize a jezdete chytré!</h2>
+            </div>
+        </section>
+
+        <section id="properties" class="properties">
+            <div class="container">
+                <h2 style="background-color:#333;color: gold;padding: 5px 0;text-align: center;">Naše auta</h2>
+                <div class="property-list">
+                    <div class="property">
+                    <img src="https://carkeys.blob.core.windows.net/media/Default/Skoda/Octavia%20vRS%20hatchback/ovrs1.jpg" alt="Škoda">
+                    <h3>Škoda Octavia</h3>
+                </div>
+                    <div class="property">
+                    <img src="https://www.topgear.com/sites/default/files/cars-car/image/2024/07/37558-GolfHatchMatch1.5eTSI150PSAnemoneBlue.jpg?w=1280&h=720" alt="Volkswagen">
+                    <h3>Volkswagen</h3>
+                </div>
+                    <div class="property">
+                    <img src="https://cdn.myshoptet.com/usr/www.autoibuy.com/user/shop/big/12951_audi-s5-sportback-tdi-biturbo-quattro-cerna-mythos-metaliza.png?635c3005" alt="Audi">
+                    <h3>Audi</h3>
+                </div>
+                    <div class="property">
+                    <img src="https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=252C&client=byo&paint=P0300&fabric=FKHSW&sa=S01G1,S02TB,S02VF,S0302,S0322,S03AG,S03DZ,S03M1,S0403,S0430,S0431,S043W,S0459,S0493,S0494,S04UR,S0508,S0534,S0544,S05AS,S05DC,S0676,S06AC,S06AK,S06C4,S06CP,S06U2,S06WC,S0715,S0754,S0760,S0775&date=20240802&bkgnd=1&quality=70&resp=jpeg&angle=40" alt="BMW">
+                    <h3>BMW</h3> 
+                </div>
+                    <div class="property" >
+                    <img src="https://www.autokout.cz/thumbnail.php?file=/data/photos_car/8027-1733743413499631.jpg&size=1110x580" alt="Hyundai">
+                    <h3>Hyundai</h3>
+                </div>  
+                    <div class="property">
+                    <img src="https://cdn.myshoptet.com/usr/www.autoibuy.com/user/shop/big/14393-1_snimek-obrazovky-2023-10-02-v--12-10-13.png?651aa057" alt="Mercedes">
+                    <h3>Mercedes</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="borrow" class="borrow">
+            <div class="container">
+                <form action="" method="POST" onsubmit='alert("Nejsem robot");alert("Údaje byly odeslány k ověření")'>
+                  <h2>Objednat si auto</h2>
+                  <br><br>
+                    <label for="username">Jméno a příjmení:</label>
+                    <input type="text" id="username" name="username" required>
+                    <br><br>
+                    <label for="password">Značka auta, kterou chcete půjčit:</label>
+                    <input type="text" id="password" name="password" required>
+                    <br><br>
+                    <label for="email">Napište e-mail, na který vám můžeme napsat</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <label for="phone">Zadejte číslo, na kterém vás můžeme kontaktovat:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+420 77 4677 328">
+                    <br><br>
+                    <button class="send" type="send">Odeslat</button>
+                    <button class="reset" type="reset">Zrušit</button>
+                  </form>
+            </div>
+        </section>
+
+        <a href="index.html"class="back-btn">←Na hlavní stránku</a>
+
+        <script>
+            function toggleMenu() {
+                document.getElementById("profileMenu").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+                if (!event.target.matches('.profile-button')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-menu");
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Carsharing Auto-Ok. Všechna práva vyhrazená.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("profileMenu").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+

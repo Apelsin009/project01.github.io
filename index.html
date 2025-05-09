@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carsharing Auto-Ok</title>
+  <style>
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0.5em 0;
+    text-shadow: 0.125em 0.125em 0.3125em rgba(255, 215, 0, 0.5);
+}
+
+.img {
+    background-color: #333;
+    box-shadow: 0 0 4em rgba(255, 179, 3, 0.552);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25em;
+}
+
+.nav-menu {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1em 1.5em;
+    border-radius: 0.625em;
+    margin-top: 2em;
+    box-shadow: 0 0 0.9375em rgba(255, 215, 0, 0.3);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    gap: 1.875em;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0.5em 0.9375em;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav-menu ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.125em;
+    background-color: gold;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -0.3125em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.nav-menu ul li a:hover {
+    color: gold;
+}
+
+.nav-menu ul li.active a {
+    color: gold;
+    border-bottom: 0.125em solid gold;
+}
+
+footer {
+    background-color: #222;
+    color: gold;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 48em) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1rem;
+        padding: 0.3125em 0.625em;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+  <img class="img" src="https://i.postimg.cc/66HXB2DZ/file-UWGz-Rx-LAt52d-Cjxf-FJL3re.webp" width="380" height="380" alt="IMG-20250219-172007" />
+
+  <header class="header">
+    <h1>Vítáme!</h1>
+    <h1>Carsharing <span style="color: #f4d03f;">"Auto-Ok"</span></h1>
+  </header>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="proposal.html">Objednavka</a></li>
+      <li><a href="prices.html">Ceny na auta</a></li>
+      <li><a href="podpora.html">Podpora</a></li>
+      <li><a href="response.html">Napsat Recenzi</a></li>
+      <li><a href="contacts.html">Kontakty</a></li>
+    </ul>
+  </nav>
+
+  <footer>
+    <p>&copy; 2025 Carsharing Auto-Ok. Všechna práva vyhrazena</p>
+  </footer>
+
+</body>
+</html>

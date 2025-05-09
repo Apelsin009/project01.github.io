@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podpora</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            text-align: center;
+            color: gold;
+            font-family: Arial, sans-serif;
+        }
+
+        .support {
+            background-color: #444;
+            color: gold;
+            padding: 60px 0;
+        }
+
+        .content {
+            padding: 60px;
+            margin: 40px auto;
+        }
+
+        div {
+            background-color: black;
+            border: 15px solid gold;
+            outline: 5px solid black;
+            padding: 50px;
+            margin: 30px auto;
+            border-radius: 50px;
+            max-width: 600px;
+        }
+
+        textarea {
+            width: 90%;
+            height: 200px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+            background-color: black;
+            color: gold;
+        }
+
+        .submit {
+            border-radius: 5px;
+            border: 2px solid gold;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .submit:hover {
+            background-color: gold;
+            color: black;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            text-align: center;
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background-color: gold;
+            color: black;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        footer {
+         background-color: #222;
+         color: gold;
+         padding: 10px 0;
+         width: 100%;
+         text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="support">Podpora naší stránky</h1>
+    <div>
+        <h2>Telefon: +420 77 6547 98</h2>
+        <h2>Napište svůj problém:</h2>
+        <textarea id="text" name="text" required></textarea><br>
+        <button class="submit" type="submit">Odeslat</button>
+    </div>
+    <a href="index.html" class="back-btn">← Na hlavní stránku</a>
+    <footer>
+        <p>&copy; 2025 Carsharing Auto-Ok. Všechna práva vyhrazena.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web kde můžeš půjčít auto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Auto-Ok</div>
+        <img class="img" src='https://i.postimg.cc/66HXB2DZ/file-UWGz-Rx-LAt52d-Cjxf-FJL3re.webp' width="70" height="50" alt='IMG'/>
+        <div class="profile-menu">
+            <button class="profile-button" onclick="toggleMenu()">Můj profil</button>
+            <div class="dropdown-menu" id="profileMenu">
+                <a href="#" id="loginLink">Přihlášení</a>
+                <a href="#" id="registerLink">Registrace</a>
+                <a href="#" id="logoutLink" style="display: none;">Odhlásit se</a>
+            </div>
+        </div>
+    </div>
+    <div class="profile-section" id="profileSection" style="display: none; text-align: center; margin-top: 20px;">
+        <img id="profilePic" src="default-profile.png" alt="Profilová fotka" width="100" height="100" style="border-radius: 50%;">
+        <input type="file" id="uploadPic" accept="image/*" style="display: block; margin: 10px auto;">
+        <p id="usernameDisplay" style="color: gold;"></p>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loginLink = document.getElementById("loginLink");
+            const registerLink = document.getElementById("registerLink");
+            const logoutLink = document.getElementById("logoutLink");
+            const profileMenu = document.getElementById("profileMenu");
+            const profileSection = document.getElementById("profileSection");
+            const usernameDisplay = document.getElementById("usernameDisplay");
+            const profilePic = document.getElementById("profilePic");
+            const uploadPic = document.getElementById("uploadPic");
+
+            function toggleMenu() {
+                profileMenu.classList.toggle("show");
+            }
+
+            function checkLogin() {
+                const username = localStorage.getItem("username");
+                const userPic = localStorage.getItem("profilePic");
+                if (username) {
+                    loginLink.style.display = "none";
+                    registerLink.style.display = "none";
+                    logoutLink.style.display = "block";
+                    profileSection.style.display = "block";
+                    usernameDisplay.textContent = "Vítejte, " + username;
+                    if (userPic) {
+                        profilePic.src = userPic;
+                    }
+                }
+            }
+
+            loginLink.addEventListener("click", function() {
+                const username = prompt("Zadejte své jméno:");
+                if (username) {
+                    localStorage.setItem("username", username);
+                    checkLogin();
+                }
+            });
+
+            registerLink.addEventListener("click", function() {
+                const username = prompt("Zadejte nové uživatelské jméno:");
+                if (username) {
+                    localStorage.setItem("username", username);
+                    alert("Registrace úspěšná! Nyní se můžete přihlásit.");
+                    checkLogin();
+                }
+            });
+
+            logoutLink.addEventListener("click", function() {
+                localStorage.removeItem("username");
+                localStorage.removeItem("profilePic");
+                location.reload();
+            });
+
+            uploadPic.addEventListener("change", function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        localStorage.setItem("profilePic", e.target.result);
+                        profilePic.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            checkLogin();
+        });
+    </script>
+</body>
+</html>

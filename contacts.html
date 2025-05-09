@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carsharing Auto-Ok</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 60px; /* Щоб footer не накривав контент */
+        }
+
+        .contact-title {
+            background-color: #333;
+            color: gold;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .contacto {
+            background-color: #222;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .contacto p {
+            color: gold;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contacto a {
+            color: rgb(162, 152, 152);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contacto a:hover {
+            color: gold;
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: gold;
+        }
+
+        footer {
+            background-color: #333;
+            color: gold;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-title">Kontakty</div>
+
+    <div class="contacto">
+        <p>Telefonní číslo: <a href="tel:+420771234567">+420 77 1234 567</a></p>
+        <p>E-mail: <a href="mailto:info@auto-ok.cz">info@auto-ok.cz</a></p>
+        <div class="social-icons">
+            <a href="#" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+            </a>
+            <a href="#" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn">← Na hlavní stránku</a>
+
+    <footer>
+        <p>&copy; 2025 Carsharing Auto-Ok. Všechna práva vyhrazena</p>
+    </footer>
+
+</body>
+</html>

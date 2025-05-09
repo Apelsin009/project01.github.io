@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recenze</title>
+    <style>
+      * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: gold;
+}
+
+.header {
+    background-color: #444;
+    color: gold;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container {
+    background-color: black;
+    border: 15px solid gold;
+    outline: 5px solid black;
+    padding: 50px;
+    margin: 30px auto;
+    border-radius: 50px;
+    max-width: 600px;
+    text-align: center;
+}
+
+textarea {
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid gold;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    background-color: black;
+    color: gold;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 2px solid gold;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.reviews-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+summary {
+    color: gold;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.review {
+    background-color: black;
+    color: gold;
+    border: 10px solid gold;
+    outline: 5px solid black;
+    padding: 20px;
+    border-radius: 30px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.review h3 {
+    margin-top: 0;
+}
+
+.review p {
+    font-style: italic;
+}
+
+.author {
+    text-align: right;
+    font-weight: bold;
+}
+
+.back-btn {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer {
+    background-color: #222;
+    color: gold;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="header">Recenze</div>
+
+    <div class="container">
+        <h2 style="color: gold;">Děkujeme, že jste navštívili naši stránku</h2>
+        <form action="#" method="post">
+            <label for="text"><h2 style="color: gold;">Napište svůj názor na vylepšení webu:</h2></label><br>
+            <textarea id="text" name="text" required></textarea><br>
+            <button class="btn" type="submit">Odeslat</button>
+        </form>
+    </div>
+
+    <details class="reviews-container">
+        <summary>Recenze tady</summary>
+        <div class="reviews">
+            <div class="review">
+                <p>"V této carsharingové společnosti jsem už několik měsíců a moje zkušenosti jsou pouze pozitivní! Automobily jsou vždy ve skvělém stavu a proces rezervace je velmi jednoduchý a přehledný. Zvlášť se mi líbí možnost výběru mezi různými modely, což umožňuje najít auto podle jakýchkoli potřeb. Doporučuji všem!"</p>
+                <p class="author">Karel P.</p>
+            </div>
+            <div class="review">
+                <p>"Moje zkušenost s touto carsharingovou společností byla celkem dobrá, ale jsou zde některé nuance. Automobily je občas těžké najít v centru města a ceny v špičkách mohou výrazně vzrůst. Nicméně, zákaznická podpora je vždy připravena pomoci, což mě velmi těší. Doufám, že se časem zlepší dostupnost automobilů."</p>
+                <p class="author">Marek J.</p>
+            </div>
+            <div class="review">
+                <p>"To je nejlepší carsharingová firma, se kterou jsem pracoval! Vždy čisté a dobře udržované automobily a také pohodlná aplikace pro rezervaci. Zvlášť se mi líbí věrnostní program – každá jízda přináší bonusy. Jsem si jistý, že budu nadále využívat jejich služby!"</p>
+                <p class="author">Marie A.</p>
+            </div>
+        </div>
+    </details>
+
+    <a href="index.html" class="back-btn">← Na hlavní stránku</a>
+
+    <footer>
+        <p>&copy; 2025 Carsharing Auto-Ok. Všechna práva vyhrazena</p>
+    </footer>
+
+</body>
+</html>

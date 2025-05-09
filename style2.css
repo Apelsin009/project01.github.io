@@ -1,0 +1,58 @@
+body{
+    background-color: black;
+}
+table {
+    font-family: Arial, sans-serif;
+    border-radius: collapse;
+    width: 100%;
+}
+
+.tablytsya{
+    background-color: #333;
+    color: gold;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+td, th {
+   color: gold;
+    border: 1px solid gold;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+}
+
+.back-btn {
+  display: block;
+   width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+   background-color: #222;
+   color: white;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.back-btn:hover {
+   background-color: gold;
+   color: black;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+footer {
+    background-color: #222;
+    color: gold;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+
+
